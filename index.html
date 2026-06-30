@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're Invited — Arya's Birthday</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stickers" aria-hidden="true">
+    <span class="sticker s1">🥂</span>
+    <span class="sticker s2">✨</span>
+    <span class="sticker s3">🔥</span>
+    <span class="sticker s4">💋</span>
+    <span class="sticker s5">😎</span>
+    <span class="sticker s6">🎶</span>
+    <span class="sticker s7">✨</span>
+  </div>
+
+  <main class="card">
+    <div id="sealStage" class="seal-stage">
+      <div class="eyebrow">A Private Invitation</div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#f3ead9" stroke-width="1.2">
+          <path d="M12 21s-8-5.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-8 11-8 11z" />
+        </svg>
+      </div>
+      <div class="seal-label">Tap the seal to open</div>
+    </div>
+
+    <div id="letter" class="letter">
+      <div class="eyebrow">You're Invited</div>
+      <h1 class="invite-title">Arya is turning a year more dangerous</h1>
+      <p class="invite-sub">July 3rd · Evening</p>
+
+      <div class="rule"></div>
+
+      <div class="letter-body">
+        <p>Dearest friend,</p>
+        <p>Mark your calendar and clear your evening — I'm finally turning a year older, and I refuse to do it without my favourite people in the room. Expect good food, better music, and photos we'll be reposting for years.</p>
+        <p>There's just one thing I need from you before the night begins: help me pick where we're celebrating. Two places, two completely different vibes — the choice is in your hands.</p>
+      </div>
+
+      <dl class="details">
+        <dt>Date</dt>
+        <dd>3rd July</dd>
+        <dt>Time</dt>
+        <dd>7:00 PM onwards</dd>
+        <dt>Dress Code</dt>
+        <dd><span class="dress-tag">Cool &amp; Sexy</span></dd>
+      </dl>
+
+      <div class="cta-row">
+        <a href="invite.html" class="btn">Cast Your Vote →</a>
+      </div>
+
+      <div class="signed">— Arya</div>
+    </div>
+  </main>
+
+  <script src="confetti.js"></script>
+  <script>
+    const stage = document.getElementById('sealStage');
+    const letter = document.getElementById('letter');
+    stage.addEventListener('click', () => {
+      burstConfetti(stage);
+      stage.style.display = 'none';
+      letter.classList.add('open');
+    });
+  </script>
+</body>
+</html>
